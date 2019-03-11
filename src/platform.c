@@ -7,7 +7,7 @@
 #include "platform/platform.h"
 
 void static inline _get_info(const cl_platform_id platformid,
-	const char * type_name, const uint type_value)
+	const char * type_name, const cl_platform_info type_value)
 {
 
 	size_t size = 0;
@@ -31,11 +31,13 @@ void static inline _get_info(const cl_platform_id platformid,
 		type_value, size, platform_info, NULL);
 	if(!check_error(err, detail))
 	{
-		return;
+		goto final;
 	}
 	platform_info[size] = '\0';
 	printf("%s: %s\n", type_name, platform_info);
+final:
 	free(platform_info);
+	platform_info = NULL;
 }
 
 cl_platform_id * get_cl_platforms(cl_uint * num_platform)
@@ -58,7 +60,8 @@ cl_platform_id * get_cl_platforms(cl_uint * num_platform)
 	err = clGetPlatformIDs(*num_platform, platformids, NULL);
 	if(!check_error(err, "Cannot fount any OpenCL platform\n"))
 	{
-		return NULL;
+		free(platformids);
+		platformids = NULL;
 	}
 	return platformids;
 }
@@ -75,8 +78,12 @@ void get_cl_platform_info(const cl_platform_id *platformids,
 
 	cl_uint index = 0;
 
+	printf("There were(was) %d OpenCL platform on this OS\n",
+		num_platform);
 	for(;index < num_platform; index++)
 	{
+		printf("The follow is the %d platform detail info\n%s\n",
+			index, SPLITER);
 		_get_info(platformids[index],
 			NAME_TO_STRING(CL_PLATFORM_NAME),
 			CL_PLATFORM_NAME);

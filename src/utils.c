@@ -4,7 +4,7 @@
 #include "utils.h"
 
 
-int check_error(cl_int err, const char * err_msg)
+int check_error(const cl_int err, const char * err_msg)
 {
 	if (CL_SUCCESS != err)
 	{
