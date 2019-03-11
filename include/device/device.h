@@ -21,16 +21,13 @@ void get_cl_device_info_on_platform(const cl_device_id *deviceids,
 #define __get_device_info_numtype__(\
 	type, deviceid, device_info_type, device_info_name)			\
 ({										\
-	type device_info_value = 0;						\
+	type device_info_value = (type)0;						\
 	cl_int err = clGetDeviceInfo((deviceid), (device_info_type),		\
 		sizeof(type), &(device_info_value), NULL);			\
 	char msg[128];								\
 	sprintf(msg, "ERROR: Cannot found %s information of this device\n",	\
 		(device_info_name));						\
-	if(!check_error(err, msg))						\
-	{									\
-		return;								\
-	}									\
+	if(!check_error(err, msg));						\
 	device_info_value;							\
 })
 

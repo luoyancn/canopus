@@ -149,14 +149,318 @@ void get_cl_device_info_on_platform(const cl_device_id *deviceids,
 			__get_device_info_numtype__(cl_uint, deviceids[index],
 				CL_DEVICE_VENDOR_ID,
 				NAME_TO_STRING(CL_DEVICE_VENDOR_ID)));
-		printf("%s: %u\n", NAME_TO_STRING(CL_DEVICE_MAX_COMPUTE_UNITS),
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_COMPUTE_UNITS),
 			__get_device_info_numtype__(cl_uint, deviceids[index],
 				CL_DEVICE_MAX_COMPUTE_UNITS,
 				NAME_TO_STRING(CL_DEVICE_MAX_COMPUTE_UNITS)));
-		printf("%s: %u\n", NAME_TO_STRING(CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS),
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS),
 			__get_device_info_numtype__(cl_uint, deviceids[index],
 				CL_DEVICE_MAX_COMPUTE_UNITS,
-				NAME_TO_STRING(CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS)));
+				NAME_TO_STRING(
+					CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_INT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_INT,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_INT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF,
+				NAME_TO_STRING(
+				CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_CLOCK_FREQUENCY),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_CLOCK_FREQUENCY,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_CLOCK_FREQUENCY)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_ADDRESS_BITS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_ADDRESS_BITS,
+				NAME_TO_STRING(
+				CL_DEVICE_ADDRESS_BITS)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_READ_IMAGE_ARGS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_READ_IMAGE_ARGS,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_READ_IMAGE_ARGS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_WRITE_IMAGE_ARGS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_WRITE_IMAGE_ARGS,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_WRITE_IMAGE_ARGS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_READ_WRITE_IMAGE_ARGS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_READ_WRITE_IMAGE_ARGS,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_READ_WRITE_IMAGE_ARGS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_SAMPLERS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_SAMPLERS,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_SAMPLERS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE_PITCH_ALIGNMENT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_IMAGE_PITCH_ALIGNMENT,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE_PITCH_ALIGNMENT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_PIPE_ARGS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MAX_PIPE_ARGS,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_PIPE_ARGS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PIPE_MAX_ACTIVE_RESERVATIONS),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PIPE_MAX_ACTIVE_RESERVATIONS,
+				NAME_TO_STRING(
+				CL_DEVICE_PIPE_MAX_ACTIVE_RESERVATIONS)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PIPE_MAX_PACKET_SIZE),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_PIPE_MAX_PACKET_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_PIPE_MAX_PACKET_SIZE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_MEM_BASE_ADDR_ALIGN),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_MEM_BASE_ADDR_ALIGN,
+				NAME_TO_STRING(
+				CL_DEVICE_MEM_BASE_ADDR_ALIGN)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE),
+			__get_device_info_numtype__(cl_uint, deviceids[index],
+				CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE)));
+
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_PARAMETER_SIZE),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_MAX_PARAMETER_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_PARAMETER_SIZE)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_WORK_GROUP_SIZE),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_MAX_WORK_GROUP_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_WORK_GROUP_SIZE)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE2D_MAX_WIDTH),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE2D_MAX_WIDTH,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE2D_MAX_WIDTH)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE2D_MAX_HEIGHT),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE2D_MAX_HEIGHT,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE2D_MAX_HEIGHT)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE3D_MAX_WIDTH),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE3D_MAX_WIDTH,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE3D_MAX_WIDTH)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE3D_MAX_HEIGHT),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE3D_MAX_HEIGHT,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE3D_MAX_HEIGHT)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE3D_MAX_DEPTH),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE3D_MAX_DEPTH,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE3D_MAX_DEPTH)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE_MAX_BUFFER_SIZE),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE_MAX_BUFFER_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE_MAX_BUFFER_SIZE)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE_MAX_ARRAY_SIZE),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_IMAGE_MAX_ARRAY_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE_MAX_ARRAY_SIZE)));
+		printf("%s: %zu\n", NAME_TO_STRING(
+			CL_DEVICE_PROFILING_TIMER_RESOLUTION),
+			__get_device_info_numtype__(size_t, deviceids[index],
+				CL_DEVICE_PROFILING_TIMER_RESOLUTION,
+				NAME_TO_STRING(
+				CL_DEVICE_PROFILING_TIMER_RESOLUTION)));
+
+		printf("%s: %lu\n", NAME_TO_STRING(
+			CL_DEVICE_MAX_MEM_ALLOC_SIZE),
+			__get_device_info_numtype__(
+				cl_ulong, deviceids[index],
+				CL_DEVICE_MAX_MEM_ALLOC_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_MAX_MEM_ALLOC_SIZE)));
+		printf("%s: %lu\n", NAME_TO_STRING(
+			CL_DEVICE_LOCAL_MEM_SIZE),
+			__get_device_info_numtype__(
+				cl_ulong, deviceids[index],
+				CL_DEVICE_LOCAL_MEM_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_LOCAL_MEM_SIZE)));
+		printf("%s: %lu\n", NAME_TO_STRING(
+			CL_DEVICE_GLOBAL_MEM_CACHE_SIZE),
+			__get_device_info_numtype__(
+				cl_ulong, deviceids[index],
+				CL_DEVICE_GLOBAL_MEM_CACHE_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_GLOBAL_MEM_CACHE_SIZE)));
+		printf("%s: %lu\n", NAME_TO_STRING(
+			CL_DEVICE_GLOBAL_MEM_SIZE),
+			__get_device_info_numtype__(
+				cl_ulong, deviceids[index],
+				CL_DEVICE_GLOBAL_MEM_SIZE,
+				NAME_TO_STRING(
+				CL_DEVICE_GLOBAL_MEM_SIZE)));
+
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_IMAGE_SUPPORT),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_IMAGE_SUPPORT,
+				NAME_TO_STRING(
+				CL_DEVICE_IMAGE_SUPPORT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_ERROR_CORRECTION_SUPPORT),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_ERROR_CORRECTION_SUPPORT,
+				NAME_TO_STRING(
+				CL_DEVICE_ERROR_CORRECTION_SUPPORT)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_ENDIAN_LITTLE),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_ENDIAN_LITTLE,
+				NAME_TO_STRING(
+				CL_DEVICE_ENDIAN_LITTLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_AVAILABLE),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_AVAILABLE,
+				NAME_TO_STRING(
+				CL_DEVICE_AVAILABLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_COMPILER_AVAILABLE),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_COMPILER_AVAILABLE,
+				NAME_TO_STRING(
+				CL_DEVICE_COMPILER_AVAILABLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_LINKER_AVAILABLE),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_LINKER_AVAILABLE,
+				NAME_TO_STRING(
+				CL_DEVICE_LINKER_AVAILABLE)));
+		printf("%s: %u\n", NAME_TO_STRING(
+			CL_DEVICE_PREFERRED_INTEROP_USER_SYNC),
+			__get_device_info_numtype__(
+				cl_bool, deviceids[index],
+				CL_DEVICE_PREFERRED_INTEROP_USER_SYNC,
+				NAME_TO_STRING(
+				CL_DEVICE_PREFERRk=ED_INTEROP_USER_SYNC)));
 	}
 }
 
