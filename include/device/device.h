@@ -1,8 +1,10 @@
 #ifndef _DEVICE_H
 #define _DEVICE_H
 
-#include "CL/cl.h"
+#include <stdio.h>
+#include <stdlib.h>
 
+#include "CL/cl.h"
 #include "utils.h"
 
 cl_device_id * get_cl_cpu_devices_on_platform(

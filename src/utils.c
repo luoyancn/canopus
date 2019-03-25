@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "CL/cl.h"
 #include "CL/cl_ext_intelfpga.h"
@@ -178,4 +180,56 @@ int check_error(const cl_int err, const char * err_msg)
 		return 0;
 	}
 	return 1;
+}
+
+char * read_kernel_source_file(const char * file_path, size_t *source_len)
+{
+	FILE * source = fopen(file_path, "rb");
+	fseek(source, 0, SEEK_END);
+	long source_size = ftell(source);
+	rewind(source);
+	char * source_ctxt = NULL;
+	if (NULL == (source_ctxt = (char*)malloc(
+		sizeof(char) * source_size + 1)))
+	{
+		printf("Cannot allocate more memory for source file\n");
+		return NULL;
+	}
+	memset(source_ctxt, source_size + 1, 0);
+	fread(source_ctxt, sizeof(char), source_size, source);
+	source_ctxt[source_size] = '\0';
+	fclose(source);
+	if(NULL != source_len)
+	{
+		*source_len = source_size;
+	}
+#if 0
+	printf("%s\n", source_ctxt);
+#endif
+	return source_ctxt;
+}
+
+unsigned char * read_kernel_binary(const char * file_path,
+	size_t * binary_len)
+{
+	FILE * source = fopen(file_path, "rb");
+	fseek(source, 0, SEEK_END);
+	long source_size = ftell(source);
+	rewind(source);
+	unsigned char * binary = NULL;
+	if (NULL == (binary = (unsigned char*)malloc(
+		sizeof(unsigned char) * source_size + 1)))
+	{
+		printf("Cannot allocate more memory for binary file\n");
+		return NULL;
+	}
+	if(NULL != binary_len)
+	{
+		*binary_len = source_size;
+	}
+	memset(binary, source_size + 1, 0);
+	fread(binary, sizeof(char), source_size, source);
+	binary[source_size] = '\0';
+	fclose(source);
+	return binary;
 }

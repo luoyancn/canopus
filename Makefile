@@ -20,7 +20,7 @@ AOCL_LINK_CONFIG := $(shell aocl link-config )
 ifeq ($(DEBUG),1)
 CFLAGS += -g
 else
-CFLAGS += -O2 -Wall
+CFLAGS += -g -O2 -Wall
 endif
 
 # Compiler
@@ -31,7 +31,7 @@ TARGET := canopus
 
 # Directories
 INC_DIRS := include
-LIB_DIRS := 
+LIB_DIRS :=
 
 # Files
 INCS := $(wildcard )
